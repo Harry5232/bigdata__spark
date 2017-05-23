@@ -71,7 +71,7 @@ def PrepareData(sc):
 
     
 def PredictData(sc,model): 
-    i = 0
+    i = 0  #做confusion matrix
     c = 0
     w = 0
     tp = 0
@@ -109,8 +109,6 @@ def PredictData(sc,model):
 		else:
 			fn = fn +1
 			
-	#print("Predicted: "+str(predictResult)+", Label: "+str(label))
-	#print("Features: "+str(data[1]))
 	print("")
         testerror = float(fp+fn)/number
     print("Total Correct:"+str(c)+", Wrong:"+str(w))
@@ -237,7 +235,7 @@ if __name__ == "__main__":
     elif   (len(sys.argv) == 2) and (sys.argv[1]=="a"): 
         print("-----所有參數訓練評估找出最好的參數組合---------")  
         model=evalAllParameter(trainData, validationData,
-                         [70,80,100], 
+                         [70,80,100],   #自己列出幾種可能的參數組合
                          [10,20,50,70],
                           [0.5, 0.8, 1 ])
     print("==========測試階段===============")
@@ -248,6 +246,7 @@ if __name__ == "__main__":
     print("==========預測資料===============")
     
     PredictData(sc, model)
-    #model.save(sc, "target/pythonLogisticRegressionWithLSGDSModel3")
+    #將訓練好的model儲存
+    #model.save(sc, "target/pythonLogisticRegressionWithLSGDSModel3")  
     print("done")
     
