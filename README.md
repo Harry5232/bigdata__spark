@@ -7,5 +7,5 @@ This is final project to predict Expedia Travel clicking rate and booking rate.
 105266002   林勁宏  
 105300260   孔慧盈  
 data檔案連結  
-train267.csv  https://drive.google.com/file/d/0BwtRXurUpR_-X2pObHNGUUNWa1k/view?usp=sharing   
+train267.csv  https://drive.google.com/file/d/0BwtRXurUpR_-X2pObHNGUUNWa1k/view?usp=sharing  
 train268.csv  https://drive.google.com/file/d/0BwtRXurUpR_-QjNuTW95Zk1fX1E/view?usp=sharing  
